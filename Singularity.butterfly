@@ -54,18 +54,18 @@ mkdir -p /run/user/1000
 chmod -R 775 /run/user/1000
 
 # Install butterfly
-pip install butterfly[systemd]
+# pip install butterfly[systemd]
 
-cd /etc/systemd/system
-curl -O https://raw.githubusercontent.com/paradoxxxzero/butterfly/master/butterfly.service
-curl -O https://raw.githubusercontent.com/paradoxxxzero/butterfly/master/butterfly.socket
-systemctl enable butterfly.socket
-systemctl start butterfly.socket
+# cd /etc/systemd/system
+# curl -O https://raw.githubusercontent.com/paradoxxxzero/butterfly/master/butterfly.service
+# curl -O https://raw.githubusercontent.com/paradoxxxzero/butterfly/master/butterfly.socket
+# systemctl enable butterfly.socket
+# systemctl start butterfly.socket
 
-butterfly.server.py --generate-certs --host="127.0.0.1"
-cp /etc/butterfly/ssl/butterfly_ca.crt /etc/ssl/certs/butterfly_ca.crt
-cp /etc/butterfly/ssl/butterfly_127.0.0.1.crt /etc/ssl/certs/butterfly_localhost.crt
-update-ca-certificates
+# butterfly.server.py --generate-certs --host="127.0.0.1"
+# cp /etc/butterfly/ssl/butterfly_ca.crt /etc/ssl/certs/butterfly_ca.crt
+# cp /etc/butterfly/ssl/butterfly_127.0.0.1.crt /etc/ssl/certs/butterfly_localhost.crt
+# update-ca-certificates
 #certutil -A /etc/ssl/certs/butterfly_ca.crt -n Butterfly-Main -t "TCu,Cu,Tuw"
 
 #butterfly.server.py --host=localhost --port=77777 &&
