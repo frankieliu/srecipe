@@ -4,8 +4,8 @@ From: ubuntu:latest
 %runscript
 
 
-butterfly.server.py --generate-user-pkcs=$USER 
-nohup /opt/firefox52/firefox localhost:7777 & exec butterfly.server.py --port=7777 --unsecure
+# butterfly.server.py --generate-user-pkcs=$USER 
+# nohup /opt/firefox52/firefox localhost:7777 & exec butterfly.server.py --port=7777 --unsecure
 #butterfly.server.py --host=localhost --port=7777
 
 
