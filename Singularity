@@ -18,7 +18,9 @@ echo "This section happens once after bootstrap to build the image."
 mkdir -p /code
 sed -i '/bionic.*universe/s/^#//g' /etc/apt/sources.list
 apt-get -y update
-apt-get install firefox xorg flashplugin-installer
+apt-get install emacs
+apt-get install firefox
+apt-get install gnome-terminal
 # apt-get install vim
 # android-tools-adb
 # android-tools-fastboot
